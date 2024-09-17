@@ -34,4 +34,17 @@ public class Vector3D {
         return dot(new Vector3D(point.x, point.y, point.z));
     }
 
+    public double dot(Normal normal) {
+        return x* normal.x + y* normal.y + z* normal.z;
+    }
+
+    // inplace normalisation.
+    public void normalize () {
+        double magnitude = Math.sqrt(x*x + y*y + z*z);
+
+        x /= magnitude;
+        y /= magnitude;
+        z /= magnitude;
+    }
+
 }

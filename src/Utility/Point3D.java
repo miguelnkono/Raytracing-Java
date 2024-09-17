@@ -40,4 +40,8 @@ public class Point3D {
     public double dot(Vector3D vector) {
         return vector.dot(this);
     }
+
+    public double dot(Normal normal) {
+        return x* normal.x + y * normal.y + z * normal.z;
+    }
 }
